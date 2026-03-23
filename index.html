@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=Poppins:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 </head>
 <body>
     <!-- Preloader -->
@@ -60,7 +62,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg">
-            <img src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Beautiful cake" class="hero-bg-img" fetchpriority="high">
+            <img src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Beautiful cake" class="hero-bg-img" fetchpriority="high" decoding="async">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -377,9 +379,9 @@
                         <p><a href="https://wa.me/947776085647" target="_blank">Chat with us on WhatsApp</a></p>
                     </div>
                 </div>
-                <div class="contact-map">
+                <div class="contact-map" id="mapContainer">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15844.176768!2d80.5855!3d6.8917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3bf2b8d5d9c3b%3A0x2c63ba784c3d6c0c!2sHatton!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk" 
+                        data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15844.176768!2d80.5855!3d6.8917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3bf2b8d5d9c3b%3A0x2c63ba784c3d6c0c!2sHatton!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk" 
                         width="100%" 
                         height="100%" 
                         style="border:0; border-radius: 20px;" 
@@ -479,6 +481,6 @@
         <img src="" alt="Gallery image" id="lightboxImg">
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

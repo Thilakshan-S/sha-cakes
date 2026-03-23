@@ -340,13 +340,14 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.05);
-    animation: slowZoom 20s ease-in-out infinite alternate;
+    transform: scale(1.02);
+    animation: slowZoom 25s ease-in-out infinite alternate;
+    will-change: transform;
 }
 
 @keyframes slowZoom {
-    0% { transform: scale(1.05); }
-    100% { transform: scale(1.15); }
+    0% { transform: scale(1.02); }
+    100% { transform: scale(1.08); }
 }
 
 .hero-overlay {
@@ -603,6 +604,8 @@ section {
 /* ===== About Section ===== */
 .about {
     background: var(--gray-50);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 800px;
 }
 
 .about-grid {
@@ -746,6 +749,8 @@ section {
 /* ===== Products Section ===== */
 .products {
     background: var(--white);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 1000px;
 }
 
 .products-grid {
@@ -838,6 +843,8 @@ section {
 /* ===== Gallery Section ===== */
 .gallery {
     background: var(--gray-50);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 800px;
 }
 
 .gallery-grid {
